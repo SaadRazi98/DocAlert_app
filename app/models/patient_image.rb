@@ -1,0 +1,2 @@
+class PatientImage < ApplicationRecord
+end

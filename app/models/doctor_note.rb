@@ -1,0 +1,2 @@
+class DoctorNote < ApplicationRecord
+end
