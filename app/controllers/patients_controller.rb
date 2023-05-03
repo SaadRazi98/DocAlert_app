@@ -17,9 +17,23 @@ class PatientsController < ApplicationController
   end
   
   def show
-    @patients = Patient.find_by(id: params[:id])
+    @patient = Patient.find_by(id: params[:id])
     render :show
   end
+
+  def update
+    @patient = Patient.find_by(id: params[:id])
+    @patient.update(
+      patient_id: params[:patient_id] || @patient.patient_id,
+      doctor_id: params[:doctor_id] || @patient.doctor_id,
+      age: params[:age] || @patient.age,
+      medical_category: params[:medical_category]|| @patient.medical_category,
+      patient_name: params[:patient_name] || @patient.patient_name,
+    )
+    render :show
+  end
+
   
+
 
 end
