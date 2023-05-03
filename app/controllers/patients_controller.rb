@@ -33,7 +33,11 @@ class PatientsController < ApplicationController
     render :show
   end
 
-  
+  def destroy
+    @patient = Patient.find_by(id: params[:id])
+    @patient.destroy
+    render json: { message: "Patient file was successfully deleted" }
+  end
 
 
 end
