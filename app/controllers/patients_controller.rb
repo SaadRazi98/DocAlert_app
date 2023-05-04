@@ -11,6 +11,7 @@ class PatientsController < ApplicationController
       age: params[:age],
       medical_category: params[:medical_category],
       patient_name: params[:patient_name],
+      descripition: params[:descripition],
     )
     render :show
   end
@@ -27,6 +28,7 @@ class PatientsController < ApplicationController
       age: params[:age] || @patient.age,
       medical_category: params[:medical_category]|| @patient.medical_category,
       patient_name: params[:patient_name] || @patient.patient_name,
+      descripition: params[:descripition] || @patient.descripition,
     )
     render :show
   end
