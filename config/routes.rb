@@ -10,5 +10,11 @@ Rails.application.routes.draw do
   patch "/patients/:id" => "patients#update"
   delete "/patients/:id" => "patients#destroy"
 
+  get "/doctor_notes" => "doctor_notes#index"
+  post "/doctor_notes" => "doctor_notes#create"
+  get "/doctor_notes/:id" => "doctor_notes#show"
+  patch "/doctor_notes/:id" => "doctor_notes#update"
+  delete "/doctor_notes/:id" => "doctor_notes#destroy"
+
 
 end

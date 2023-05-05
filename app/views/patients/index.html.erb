@@ -1,22 +1,16 @@
-<%# ----------------------------Opening page------------------------ %>
+<%# ----------------------------ALL PATIENTS (/patients)------------------------ %>
 <div class="jumbotron text-center">
-  <h1>Patients </h1>
-  <p>list of patients</p>
+  <h1>Welcome Doctor </h1>
+  <p>Here are a list of patients who are at the hospital</p>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-</div>
+<h1>All patient</h1>
+<% @patients.each do |patient| %>
+  <h2><%= patient.patient_name %></h2>
+  <p>Doctor ID: <%= patient.doctor_id %></p>
+  <p>Age: <%= patient.age %></p>
+  <p>Medical Category: <%= patient.medical_category%></p>
+  <p>Description: <%= patient.descripition%></p>
+ 
+
+<% end %>

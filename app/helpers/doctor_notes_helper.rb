@@ -1,0 +1,2 @@
+module DoctorNotesHelper
+end
