@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   patch "/doctor_notes/:id" => "doctor_notes#update"
   delete "/doctor_notes/:id" => "doctor_notes#destroy"
 
+  get "/signup" => "users#new"
   post "/users" => "users#create"
-  post "/sessions" => "sessions#create"
-
 end
